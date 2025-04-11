@@ -276,7 +276,7 @@ import { twMerge } from "tailwind-merge";
 import "../assets/style.css"
 import TimelineDemo from "../components/TimelineDemo";
 import Navbar from "../components/navbar"
-import myPhoto2 from "../assets/myPhoto2.jpeg"
+import myphoto2 from "../assets/myphoto2.jpeg"
 import SkillCarousel from "../components/skills";
 import CollabPage from "../components/footer";
 // Utility function
@@ -326,7 +326,7 @@ export function StorySection() {
           {/* Right Image */}
           <div className="flex-1 flex justify-center md:justify-end">
             <img
-              src={myPhoto2} // replace with actual path
+              src={myphoto2} // replace with actual path
               alt="Vansh Kansal"
               className="rounded-2xl object-cover h-full max-h-[400px] w-[470px] shadow-md"
             />
