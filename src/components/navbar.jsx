@@ -1,121 +1,171 @@
 
-import React, { useState } from "react";
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
-import { motion } from "framer-motion";
-import toast, { Toaster } from "react-hot-toast";
-import Navbar from "../components/navbar";
+// import React, { useState } from "react";
+// import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
+// import { motion } from "framer-motion";
+// import toast, { Toaster } from "react-hot-toast";
+// import Navbar from "../components/navbar";
 
-export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+// export default function ContactPage() {
+//   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+//   const handleChange = (e) => {
+//     setForm({ ...form, [e.target.name]: e.target.value });
+//   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
 
-    if (!form.name || !form.email || !form.message) {
-      toast.error("Let’s not leave any part of your story in drafts — fill out all the fields.");
-      return;
-    }
+//     if (!form.name || !form.email || !form.message) {
+//       toast.error("Let’s not leave any part of your story in drafts — fill out all the fields.");
+//       return;
+//     }
 
-    setTimeout(() => {
-      toast.success("Your message is with me. Let’s co-write something meaningful.");
-      setForm({ name: "", email: "", message: "" });
-    }, 1000);
-  };
+//     setTimeout(() => {
+//       toast.success("Your message is with me. Let’s co-write something meaningful.");
+//       setForm({ name: "", email: "", message: "" });
+//     }, 1000);
+//   };
 
-  const socialLinks = [
-    { icon: <FaLinkedin />, link: "https://linkedin.com", label: "LinkedIn" },
-    { icon: <FaGithub />, link: "https://github.com", label: "GitHub" },
-    { icon: <FaTwitter />, link: "https://twitter.com", label: "Twitter" },
-    { icon: <FaEnvelope />, link: "mailto:example@email.com", label: "Email" },
-  ];
+//   const socialLinks = [
+//     { icon: <FaLinkedin />, link: "https://linkedin.com", label: "LinkedIn" },
+//     { icon: <FaGithub />, link: "https://github.com", label: "GitHub" },
+//     { icon: <FaTwitter />, link: "https://twitter.com", label: "Twitter" },
+//     { icon: <FaEnvelope />, link: "mailto:example@email.com", label: "Email" },
+//   ];
+
+//   return (
+//     <>
+//       <div className="min-h-screen bg-black px-6 py-20 md:px-16 text-white">
+//         <Toaster position="top-right" />
+
+//         <div className="max-w-4xl mx-auto text-center mb-16">
+//           <h1 className="text-5xl font-bold mb-4">Let’s Co-Write the Next Chapter ✍️</h1>
+//           <p className="text-gray-400 text-lg">
+//             Whether it’s a collaboration, a cool idea, or just a “Hey!”, my inbox is always open.
+//             Let’s connect and build something impactful together.
+//           </p>
+//         </div>
+
+//         {/* Social Icons */}
+//         <div className="flex justify-center gap-6 mb-12">
+//           {socialLinks.map((social, index) => (
+//             <motion.a
+//               key={index}
+//               href={social.link}
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               title={social.label}
+//               className="text-2xl text-gray-400 hover:text-white transition-transform hover:scale-125"
+//               whileHover={{ y: -5 }}
+//             >
+//               {social.icon}
+//             </motion.a>
+//           ))}
+//         </div>
+
+//         {/* Contact Form */}
+//         <form
+//           onSubmit={handleSubmit}
+//           className="bg-white/5 backdrop-blur-lg p-8 rounded-xl max-w-2xl mx-auto border border-white/10 shadow-xl"
+//         >
+//           <div className="mb-6">
+//             <label className="block mb-2 text-sm font-medium text-gray-300">Your Name</label>
+//             <input
+//               type="text"
+//               name="name"
+//               value={form.name}
+//               onChange={handleChange}
+//               placeholder="John Doe"
+//               className="w-full px-4 py-3 rounded-lg bg-black border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+//             />
+//           </div>
+
+//           <div className="mb-6">
+//             <label className="block mb-2 text-sm font-medium text-gray-300">Your Email</label>
+//             <input
+//               type="email"
+//               name="email"
+//               value={form.email}
+//               onChange={handleChange}
+//               placeholder="john@example.com"
+//               className="w-full px-4 py-3 rounded-lg bg-black border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+//             />
+//           </div>
+
+//           <div className="mb-6">
+//             <label className="block mb-2 text-sm font-medium text-gray-300">Your Message</label>
+//             <textarea
+//               name="message"
+//               value={form.message}
+//               onChange={handleChange}
+//               placeholder="What's on your mind?"
+//               rows={5}
+//               className="w-full px-4 py-3 rounded-lg bg-black border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white resize-none"
+//             />
+//           </div>
+
+//           <button
+//             type="submit"
+//             className="w-full py-3 px-6 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-all"
+//           >
+//             Send Message
+//           </button>
+//         </form>
+//       </div>
+
+//       <div className="relative w-full text-white">
+//         <Navbar />
+//       </div>
+//     </>
+//   );
+// }
+import React from "react";
+import { useEffect, useState } from "react";
+import {Link, NavLink} from 'react-router-dom'
+
+const Navbar = ({ initialTextColor = "text-white" }) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <>
-      <div className="min-h-screen bg-black px-6 py-20 md:px-16 text-white">
-        <Toaster position="top-right" />
+    <div className="w-full flex justify-center fixed top-0 z-50 mt-4">
+      <nav
+        className={`w-full fixed top-0 left-0 flex justify-between items-center px-10 py-4 transition-all duration-300 z-50
+          ${scrolled ? "bg-white text-black shadow-md" : `bg-transparent ${initialTextColor}`}
+        `}
+      >
+        {/* Logo */}
+        <h1 className="text-[15px] font-[Typo-4]">vanshkansal.</h1>
 
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h1 className="text-5xl font-bold mb-4">Let’s Co-Write the Next Chapter ✍️</h1>
-          <p className="text-gray-400 text-lg">
-            Whether it’s a collaboration, a cool idea, or just a “Hey!”, my inbox is always open.
-            Let’s connect and build something impactful together.
-          </p>
+        {/* Menu */}
+        <div className="flex space-x-7">
+        <NavLink to="/" className="font-[Typo-6]">Home</NavLink>
+        <NavLink to="/about" className="font-[Typo-6]">About</NavLink>
+        <NavLink to="/projects" className="font-[Typo-6]">Projects</NavLink>
+        <NavLink to="/contact" className="font-[Typo-6]">Contact</NavLink>
         </div>
 
-        {/* Social Icons */}
-        <div className="flex justify-center gap-6 mb-12">
-          {socialLinks.map((social, index) => (
-            <motion.a
-              key={index}
-              href={social.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={social.label}
-              className="text-2xl text-gray-400 hover:text-white transition-transform hover:scale-125"
-              whileHover={{ y: -5 }}
-            >
-              {social.icon}
-            </motion.a>
-          ))}
-        </div>
-
-        {/* Contact Form */}
-        <form
-          onSubmit={handleSubmit}
-          className="bg-white/5 backdrop-blur-lg p-8 rounded-xl max-w-2xl mx-auto border border-white/10 shadow-xl"
+        {/* CTA Button */}
+        <button
+          className="px-6 py-2 rounded-full transition-all duration-300 font-[Typo-5] bg-black text-white"
         >
-          <div className="mb-6">
-            <label className="block mb-2 text-sm font-medium text-gray-300">Your Name</label>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="John Doe"
-              className="w-full px-4 py-3 rounded-lg bg-black border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-            />
-          </div>
-
-          <div className="mb-6">
-            <label className="block mb-2 text-sm font-medium text-gray-300">Your Email</label>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="john@example.com"
-              className="w-full px-4 py-3 rounded-lg bg-black border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-            />
-          </div>
-
-          <div className="mb-6">
-            <label className="block mb-2 text-sm font-medium text-gray-300">Your Message</label>
-            <textarea
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="What's on your mind?"
-              rows={5}
-              className="w-full px-4 py-3 rounded-lg bg-black border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white resize-none"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="w-full py-3 px-6 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-all"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
-
-      <div className="relative w-full text-white">
-        <Navbar />
-      </div>
-    </>
+          Hire Me
+        </button>
+      </nav>
+    </div>
   );
-}
+};
+
+export default Navbar;

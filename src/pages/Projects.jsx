@@ -4,7 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { FaTools, FaCodeBranch, FaSpinner,FaReact, FaNodeJs, FaTerminal} from "react-icons/fa";
 import "../assets/style.css";
-// // import Navbar from "../components/navbar";
+import Navbar from "../components/navbar";
 export default function ProjectsPage() {
   const controls = useAnimation();
 
@@ -23,8 +23,10 @@ export default function ProjectsPage() {
   }, [controls]);
 
   return (
+    <>
+    <Navbar/>
     <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center relative overflow-hidden px-6 py-20 glitch-overlay">
-       {/* <Navbar /> */}
+       {/* <Navbar/> */}
       {/* Floating Elements */}
       <motion.div
         className="absolute top-20 left-10 text-white text-xl"
@@ -108,5 +110,7 @@ export default function ProjectsPage() {
         Every story has a chapter where the hero is preparing behind the scenes. This is mine. Stay tuned as the next innovations take shape.
       </p>
     </div>
+    
+    </>
   );
 }

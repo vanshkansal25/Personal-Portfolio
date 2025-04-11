@@ -13,11 +13,11 @@ export function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
-export function StorySection() {
+export default function StorySection() {
   return (
     <>
-    <div className="relative w-full min-h-screen pt-24 px-6 md:px-16 bg-white overflow-hidden">
-      
+    <div className="relative w-full min-h-screen pt-24 px-6 md:px-16 bg-white overflow-hidden text-black">
+      <Navbar initialTextColor="text-black"/>
       <div
         className={cn(
           "absolute inset-0 z-0",
