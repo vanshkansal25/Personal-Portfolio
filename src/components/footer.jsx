@@ -35,16 +35,13 @@ const CollabPage = () => {
       </p>
 
       <div className="flex gap-4 flex-wrap justify-center">
-        {/* <button className="px-5 py-2 border border-black rounded-full text-sm hover:bg-black hover:text-white transition">
-          SCHEDULE A CALL
-        </button> */}
+        
         <button className="px-5 py-2 bg-black text-white rounded-full text-sm hover:opacity-90 transition font-[Typo-5]">
           SEND AN EMAIL
         </button>
       </div>
 
-      {/* Quote Card */}
-      {/* Storytelling Card */}
+      
 <div className="w-full max-w-3xl mt-10 p-6 rounded-2xl bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 text-white shadow-xl">
   <p className="text-lg text-center leading-relaxed font-[Typo-5]">
     Every brand, every portfolio, every product tells a story. Mine began with curiosity and grew into creation. 

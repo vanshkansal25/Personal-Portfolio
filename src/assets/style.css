@@ -42,24 +42,7 @@
     }
   }
   
-  /* .skill-carousel-container {
-    overflow: hidden;
-    width: 100%;
-    margin-top: 2.5rem;
-  }
-  
-  .skill-carousel-track {
-    display: flex;
-    gap: 2.5rem; 
-    animation: scrollInfinite 25s linear infinite;
-    white-space: nowrap;
-  }
-  .skill-logo {
-    height: 3rem;
-    width: 3rem;  
-    flex-shrink: 0;
-  } */
-  /* StorySection.css */
+
 
 @keyframes wave {
   0% { transform: rotate(0deg); }
@@ -93,37 +76,6 @@
 }
 
 
-/* .glitch-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.glitch-text {
-  position: relative;
-  color: white;
-  text-shadow:
-    2px 0 red,
-    -2px 0 blue;
-  animation: glitchColor 2s infinite;
-}
-
-@keyframes glitchColor {
-  0% {
-    text-shadow: 2px 0 red, -2px 0 blue;
-  }
-  25% {
-    text-shadow: -2px 0 red, 2px 0 blue;
-  }
-  50% {
-    text-shadow: 2px 0 red, -2px 0 blue;
-  }
-  75% {
-    text-shadow: -2px 0 red, 2px 0 blue;
-  }
-  100% {
-    text-shadow: 2px 0 red, -2px 0 blue;
-  }
-} */
 .glitch-container {
   position: relative;
   display: inline-block;
