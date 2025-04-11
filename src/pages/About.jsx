@@ -277,7 +277,7 @@ import "../assets/style.css"
 import TimelineDemo from "../components/TimelineDemo";
 import Navbar from "../components/navbar"
 import myphoto2 from "../assets/myphoto2.jpeg"
-import SkillCarousel from "../components/skills";
+import SkillCarousel from "../components/Skills";
 import CollabPage from "../components/footer";
 // Utility function
 export function cn(...inputs) {
