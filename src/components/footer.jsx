@@ -141,7 +141,7 @@ const CollabPage = () => {
 
       {/* Social Icons */}
       <div className="flex gap-6 mt-10 text-xl sm:text-2xl text-gray-700 flex-wrap justify-center">
-        <a href="www.linkedin.com/in/vanshkansal-dev" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/vanshkansal-dev" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="hover:text-blue-700 transition" />
         </a>
         <a href="https://x.com/Vanshtwt25" target="_blank" rel="noopener noreferrer">
