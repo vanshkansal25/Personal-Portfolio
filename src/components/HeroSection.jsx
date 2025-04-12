@@ -331,7 +331,7 @@ const HeroSection = () => {
         {/* Social Icons */}
         <div className="flex justify-center gap-3 sm:gap-4 mt-6 flex-wrap">
           <a
-            href="www.linkedin.com/in/vanshkansal-dev"
+            href="https://www.linkedin.com/in/vanshkansal-dev/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-full text-gray-700 transition-all duration-300 font-[Typo-5] hover:bg-[#0077b5] hover:text-white"
@@ -351,7 +351,7 @@ const HeroSection = () => {
           </a>
 
           <a
-            href="mailto:your-vanshkansal328@gmail.com"
+            href="mailto:vanshkansal328@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-full text-gray-700 transition-all duration-300 font-[Typo-5] hover:bg-[#D44638] hover:text-white"
