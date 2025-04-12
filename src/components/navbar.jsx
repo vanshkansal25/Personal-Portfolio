@@ -234,6 +234,99 @@
 // };
 
 // export default Navbar;
+// import React, { useEffect, useState } from "react";
+// import { NavLink } from "react-router-dom";
+// import { FiMenu, FiX } from "react-icons/fi";
+
+// const Navbar = ({ initialTextColor = "text-white" }) => {
+//   const [scrolled, setScrolled] = useState(false);
+//   const [menuOpen, setMenuOpen] = useState(false);
+
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       setScrolled(window.scrollY > 50);
+//     };
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   const closeMenu = () => setMenuOpen(false);
+//   // const handleClick = () => {
+//   //   window.scrollTo(0, 0); // Scrolls to the top of the page
+//   // };
+//   const handleClick = () => {
+//     window.scrollTo({
+//       top: 0,          // Scroll to the top of the page
+//       behavior: "smooth", // Enable smooth scrolling
+//     });
+//   };
+
+//   return (
+//     <>
+//       <div className="w-full fixed top-0 z-50">
+//         <nav
+//           className={`w-full flex justify-between items-center px-6 py-4 transition-all duration-300 ${
+//             scrolled ? "bg-white text-black shadow-md" : `bg-transparent ${initialTextColor}`
+//           }`}
+//         >
+//           {/* Logo */}
+//           <h1 className="font-[Typo-4] text-[10px] sm:text-[12px] md:text-[14px] lg:text-[15px]">
+//             vanshkansal.
+//           </h1>
+
+//           {/* Desktop Menu */}
+//           <div className="hidden md:flex space-x-7">
+//             <NavLink to="/" onClick={handleClick} className="font-[Typo-6] ">Home</NavLink>
+//             <NavLink to="/about" className="font-[Typo-6]">About</NavLink>
+//             <NavLink to="/projects" className="font-[Typo-6]">Projects</NavLink>
+//             <NavLink to="/contact" className="font-[Typo-6]">Contact</NavLink>
+//           </div>
+
+//           {/* CTA Button */}
+//           <button className="hidden md:block px-6 py-2 rounded-full font-[Typo-5] bg-black text-white">
+//             Hire Me
+//           </button>
+
+//           {/* Hamburger Icon */}
+//           <div className="md:hidden">
+//             {menuOpen ? (
+//               <FiX size={24} onClick={closeMenu} className="cursor-pointer z-50" />
+//             ) : (
+//               <FiMenu size={24} onClick={() => setMenuOpen(true)} className="cursor-pointer z-50" />
+//             )}
+//           </div>
+//         </nav>
+//       </div>
+
+//       {/* Overlay */}
+//       {menuOpen && (
+//         <div
+//           className="fixed inset-0 bg-black bg-opacity-40 z-40"
+//           onClick={closeMenu}
+//         />
+//       )}
+
+//       {/* Slide-in Sidebar */}
+//       <div
+//         className={`fixed top-0 right-0 h-full w-64 bg-white text-black shadow-lg z-50 transform transition-transform duration-300 ${
+//           menuOpen ? "translate-x-0" : "translate-x-full"
+//         }`}
+//       >
+//         <div className="flex flex-col items-start px-6 py-8 space-y-6">
+//           <NavLink to="/" onClick={closeMenu} className="font-[Typo-6] ">Home</NavLink>
+//           <NavLink to="/about" onClick={closeMenu} className="font-[Typo-6]">About</NavLink>
+//           <NavLink to="/projects" onClick={closeMenu} className="font-[Typo-6]">Projects</NavLink>
+//           <NavLink to="/contact" onClick={closeMenu} className="font-[Typo-6]">Contact</NavLink>
+//           <button className="px-6 py-2 rounded-full font-[Typo-5] bg-black text-white mt-4">
+//             Hire Me
+//           </button>
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+// export default Navbar;
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -251,13 +344,11 @@ const Navbar = ({ initialTextColor = "text-white" }) => {
   }, []);
 
   const closeMenu = () => setMenuOpen(false);
-  // const handleClick = () => {
-  //   window.scrollTo(0, 0); // Scrolls to the top of the page
-  // };
+
   const handleClick = () => {
     window.scrollTo({
-      top: 0,          // Scroll to the top of the page
-      behavior: "smooth", // Enable smooth scrolling
+      top: 0,
+      behavior: "smooth",
     });
   };
 
@@ -276,16 +367,45 @@ const Navbar = ({ initialTextColor = "text-white" }) => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-7">
-            <NavLink to="/" onClick={handleClick} className="font-[Typo-6] ">Home</NavLink>
-            <NavLink to="/about" className="font-[Typo-6]">About</NavLink>
-            <NavLink to="/projects" className="font-[Typo-6]">Projects</NavLink>
-            <NavLink to="/contact" className="font-[Typo-6]">Contact</NavLink>
+            <NavLink
+              to="/"
+              onClick={handleClick}
+              className="font-[Typo-6] transition-all duration-300 hover:text-blue-500"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/about"
+              className="font-[Typo-6] transition-all duration-300 hover:text-blue-500"
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/projects"
+              className="font-[Typo-6] transition-all duration-300 hover:text-blue-500"
+            >
+              Projects
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className="font-[Typo-6] transition-all duration-300 hover:text-blue-500"
+            >
+              Contact
+            </NavLink>
           </div>
 
           {/* CTA Button */}
-          <button className="hidden md:block px-6 py-2 rounded-full font-[Typo-5] bg-black text-white">
+          {/* <button className="hidden md:block px-6 py-2 rounded-full font-[Typo-5] bg-black text-white hover:bg-gray-800 transition-all duration-300">
             Hire Me
-          </button>
+          </button> */}
+          {/* <button className="hidden md:block px-6 py-2 rounded-full font-[Typo-5] bg-black text-white transition-all duration-300 transform hover:scale-105 hover:bg-gray-800">
+  Hire Me
+</button> */}
+<button className="px-6 py-2 rounded-full font-[Typo-5] bg-black text-white mt-0.5 transition-all duration-300 transform hover:scale-110 hover:bg-gray-800 border-2 border-white">
+  <a href="mailto:vanshkansal328@gmail.com?subject=Freelance%20Opportunity&body=Hi%20Vansh,%0AI%20am%20interested%20in%20hiring%20you%20for%20a%20project.%20Let's%20connect!">Hire Me</a>
+</button>
+
+
 
           {/* Hamburger Icon */}
           <div className="md:hidden">
@@ -313,13 +433,41 @@ const Navbar = ({ initialTextColor = "text-white" }) => {
         }`}
       >
         <div className="flex flex-col items-start px-6 py-8 space-y-6">
-          <NavLink to="/" onClick={closeMenu} className="font-[Typo-6]">Home</NavLink>
-          <NavLink to="/about" onClick={closeMenu} className="font-[Typo-6]">About</NavLink>
-          <NavLink to="/projects" onClick={closeMenu} className="font-[Typo-6]">Projects</NavLink>
-          <NavLink to="/contact" onClick={closeMenu} className="font-[Typo-6]">Contact</NavLink>
-          <button className="px-6 py-2 rounded-full font-[Typo-5] bg-black text-white mt-4">
+          <NavLink
+            to="/"
+            onClick={closeMenu}
+            className="font-[Typo-6] transition-all duration-300 hover:text-blue-500"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            onClick={closeMenu}
+            className="font-[Typo-6] transition-all duration-300 hover:text-blue-500"
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/projects"
+            onClick={closeMenu}
+            className="font-[Typo-6] transition-all duration-300 hover:text-blue-500"
+          >
+            Projects
+          </NavLink>
+          <NavLink
+            to="/contact"
+            onClick={closeMenu}
+            className="font-[Typo-6] transition-all duration-300 hover:text-blue-500"
+          >
+            Contact
+          </NavLink>
+          {/* <button className="px-6 py-2 rounded-full font-[Typo-5] bg-black text-white mt-4 hover:bg-gray-800 transition-all duration-300">
             Hire Me
-          </button>
+          </button> */}
+          <button className="px-6 py-2 rounded-full font-[Typo-5] bg-black text-white mt-4 transition-all duration-300 transform hover:scale-110 hover:bg-gray-800">
+  Hire Me
+</button>
+
         </div>
       </div>
     </>
