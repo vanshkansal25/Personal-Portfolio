@@ -251,6 +251,9 @@ const Navbar = ({ initialTextColor = "text-white" }) => {
   }, []);
 
   const closeMenu = () => setMenuOpen(false);
+  const handleClick = () => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  };
 
   return (
     <>
@@ -267,7 +270,7 @@ const Navbar = ({ initialTextColor = "text-white" }) => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-7">
-            <NavLink to="/" className="font-[Typo-6]">Home</NavLink>
+            <NavLink to="/" onClick={handleClick} className="font-[Typo-6] ">Home</NavLink>
             <NavLink to="/about" className="font-[Typo-6]">About</NavLink>
             <NavLink to="/projects" className="font-[Typo-6]">Projects</NavLink>
             <NavLink to="/contact" className="font-[Typo-6]">Contact</NavLink>
