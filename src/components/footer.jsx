@@ -114,7 +114,7 @@ const CollabPage = () => {
       
       {/* Tagline */}
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center leading-snug md:leading-snug font-[Typo-5] max-w-4xl mb-4">
-        Every great story needs a collaboration — <span className="text-fuchsia-600">READY</span> to begin ours?
+        Every great story needs a collaboration — Your  <span className="text-fuchsia-600">Idea</span>, my Code <span className="text-fuchsia-600"> & </span> Design.
       </h1>
 
       {/* Subheading */}

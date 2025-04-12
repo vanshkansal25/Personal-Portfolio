@@ -309,14 +309,17 @@ const HeroSection = () => {
         </p>
 
         {/* Title */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-[Typo-6] leading-tight text-gray-900">
+        {/* <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-[Typo-6] leading-tight text-gray-900">
           Every pixel, a piece of my journey. <br /> Purpose rendered
-        </h1>
+        </h1> */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-[Typo-6] leading-tight text-gray-900">
+  Design is how it feels. Development is how it works. <br /> I do both — with intention.
+</h1>
+
 
         {/* Subtitle */}
         <p className="text-gray-500 mt-4 font-[Typo-5] text-base sm:text-lg">
-          Welcome to a digital journal shaped by curiosity, creativity, and code.
-        </p>
+        I’m your designer and developer, building seamless experiences with soul and structure.        </p>
 
         {/* CTA */}
         {/* <button className="mt-6 px-6 py-2 sm:px-8 sm:py-3 bg-black text-white rounded-full text-md sm:text-lg transition-all duration-300 font-[Typo-3] hover:bg-gray-800 hover:scale-105">
