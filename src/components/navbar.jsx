@@ -370,25 +370,25 @@ const Navbar = ({ initialTextColor = "text-white" }) => {
             <NavLink
               to="/"
               onClick={handleClick}
-              className="font-[Typo-6] transition-all duration-300 hover:text-blue-500"
+              className="font-[Typo-6] transition-all duration-300 hover:text-[#a9a9a9]"
             >
               Home
             </NavLink>
             <NavLink
               to="/about"
-              className="font-[Typo-6] transition-all duration-300 hover:text-blue-500"
+              className="font-[Typo-6] transition-all duration-300 hover:text-[#a9a9a9]"
             >
               About
             </NavLink>
             <NavLink
               to="/projects"
-              className="font-[Typo-6] transition-all duration-300 hover:text-blue-500"
+              className="font-[Typo-6] transition-all duration-300 hover:text-[#a9a9a9]"
             >
               Projects
             </NavLink>
             <NavLink
               to="/contact"
-              className="font-[Typo-6] transition-all duration-300 hover:text-blue-500"
+              className="font-[Typo-6] transition-all duration-300 hover:text-[#a9a9a9]"
             >
               Contact
             </NavLink>
