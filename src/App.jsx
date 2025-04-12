@@ -7,6 +7,7 @@ import StorySection from './pages/About'
 import ContactPage from './pages/Contact'
 import ProjectsPage from './pages/Projects'
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { Analytics } from '@vercel/analytics/react';
 // import { Navbar } from "./components/navbar";
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Route path="/projects" element={<ProjectsPage />} />
       </Routes>
     </Router>
-   
+    <Analytics />
     </>
   )
 }
