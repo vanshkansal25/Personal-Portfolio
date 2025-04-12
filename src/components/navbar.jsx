@@ -251,8 +251,14 @@ const Navbar = ({ initialTextColor = "text-white" }) => {
   }, []);
 
   const closeMenu = () => setMenuOpen(false);
+  // const handleClick = () => {
+  //   window.scrollTo(0, 0); // Scrolls to the top of the page
+  // };
   const handleClick = () => {
-    window.scrollTo(0, 0); // Scrolls to the top of the page
+    window.scrollTo({
+      top: 0,          // Scroll to the top of the page
+      behavior: "smooth", // Enable smooth scrolling
+    });
   };
 
   return (
