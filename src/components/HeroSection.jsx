@@ -295,6 +295,7 @@
 
 // export default HeroSection;
 import { Linkedin, Twitter, Instagram, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 // import "../assets/style.css";
 
 const HeroSection = () => {
@@ -318,14 +319,19 @@ const HeroSection = () => {
         </p>
 
         {/* CTA */}
-        <button className="mt-6 px-6 py-2 sm:px-8 sm:py-3 bg-black text-white rounded-full text-md sm:text-lg transition-all duration-300 font-[Typo-3] hover:bg-gray-800 hover:scale-105">
+        {/* <button className="mt-6 px-6 py-2 sm:px-8 sm:py-3 bg-black text-white rounded-full text-md sm:text-lg transition-all duration-300 font-[Typo-3] hover:bg-gray-800 hover:scale-105">
           GET IN TOUCH
-        </button>
+        </button> */}
+        <Link to="/contact">
+  <button className="mt-6 px-6 py-2 sm:px-8 sm:py-3 bg-black text-white rounded-full text-md sm:text-lg transition-all duration-300 font-[Typo-3] hover:bg-gray-800 hover:scale-105">
+    GET IN TOUCH
+  </button>
+</Link>
 
         {/* Social Icons */}
         <div className="flex justify-center gap-3 sm:gap-4 mt-6 flex-wrap">
           <a
-            href="https://www.linkedin.com/in/your-profile"
+            href="www.linkedin.com/in/vanshkansal-dev"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-full text-gray-700 transition-all duration-300 font-[Typo-5] hover:bg-[#0077b5] hover:text-white"
@@ -335,7 +341,7 @@ const HeroSection = () => {
           </a>
 
           <a
-            href="https://twitter.com/your-handle"
+            href="https://x.com/Vanshtwt25"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-full text-gray-700 transition-all duration-300 font-[Typo-5] hover:bg-[#1DA1F2] hover:text-white"
@@ -345,7 +351,7 @@ const HeroSection = () => {
           </a>
 
           <a
-            href="mailto:your-email@gmail.com"
+            href="mailto:your-vanshkansal328@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-full text-gray-700 transition-all duration-300 font-[Typo-5] hover:bg-[#D44638] hover:text-white"
@@ -355,7 +361,7 @@ const HeroSection = () => {
           </a>
 
           <a
-            href="https://www.instagram.com/your-handle"
+            href="https://www.instagram.com/__vanshkansal__"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-full text-gray-700 transition-all duration-300 font-[Typo-5] hover:bg-[#E1306C] hover:text-white"

@@ -124,8 +124,8 @@ const CollabPage = () => {
 
       {/* CTA */}
       <div className="flex gap-4 flex-wrap justify-center">
-        <button className="px-6 py-2 sm:px-8 sm:py-2 bg-black text-white rounded-full text-sm sm:text-base hover:opacity-90 transition font-[Typo-5]">
-          SEND AN EMAIL
+        <button className="px-6 py-2 sm:px-8 sm:py-2 bg-black text-white rounded-full text-sm sm:text-base transition-all duration-300 transform hover:scale-105 hover:bg-gray-800 font-[Typo-5]">
+        <a href="mailto:vanshkansal328@gmail.com">SEND AN EMAIL</a>
         </button>
       </div>
 
@@ -141,19 +141,19 @@ const CollabPage = () => {
 
       {/* Social Icons */}
       <div className="flex gap-6 mt-10 text-xl sm:text-2xl text-gray-700 flex-wrap justify-center">
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <a href="www.linkedin.com/in/vanshkansal-dev" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="hover:text-blue-700 transition" />
         </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://x.com/Vanshtwt25" target="_blank" rel="noopener noreferrer">
           <FaTwitter className="hover:text-blue-500 transition" />
         </a>
-        <a href="mailto:example@gmail.com">
+        <a href="mailto:your-vanshkansal328@gmail.com">
           <FaEnvelope className="hover:text-red-500 transition" />
         </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/__vanshkansal__" target="_blank" rel="noopener noreferrer">
           <FaInstagram className="hover:text-pink-500 transition" />
         </a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/vanshkansal25" target="_blank" rel="noopener noreferrer">
           <FaGithub className="hover:text-black transition" />
         </a>
       </div>
