@@ -465,9 +465,16 @@ const Navbar = ({ initialTextColor = "text-white" }) => {
           {/* <button className="px-6 py-2 rounded-full font-[Typo-5] bg-black text-white mt-4 hover:bg-gray-800 transition-all duration-300">
             Hire Me
           </button> */}
-          <button className="hidden md:block px-6 py-2 rounded-full font-[Typo-5] bg-black text-white transition-all duration-300 transform hover:scale-105 hover:bg-gray-800 border-2 border-white">
+          {/* <button className="hidden md:block px-6 py-2 rounded-full font-[Typo-5] bg-black text-white transition-all duration-300 transform hover:scale-105 hover:bg-gray-800 border-2 border-white">
           <a href="mailto:vanshkansal328@gmail.com?subject=Freelance%20Opportunity&body=Hi%20Vansh%2C%0A%0A%7BYour%20text%20here%7D">Hire Me</a>
-</button>
+</button> */}
+<a
+  href="mailto:vanshkansal328@gmail.com?subject=Freelance%20Opportunity&body=Hi%20Vansh%2C%0A%0A%7BYour%20text%20here%7D"
+  className="px-6 py-2 rounded-full font-[Typo-5] bg-black text-white transition-all duration-300 transform hover:scale-105 hover:bg-gray-800 border-2 border-white block"
+>
+  Hire Me
+</a>
+
 
         </div>
       </div>
