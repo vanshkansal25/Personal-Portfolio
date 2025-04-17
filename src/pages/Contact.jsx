@@ -277,10 +277,10 @@ export default function ContactPage() {
   };
 
   const socialLinks = [
-    { icon: <FaLinkedin />, link: "https://linkedin.com", label: "LinkedIn" },
-    { icon: <FaGithub />, link: "https://github.com", label: "GitHub" },
-    { icon: <FaTwitter />, link: "https://twitter.com", label: "Twitter" },
-    { icon: <FaEnvelope />, link: "mailto:example@email.com", label: "Email" },
+    { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/vanshkansal-dev", label: "LinkedIn" },
+    { icon: <FaGithub />, link: "https://github.com/vanshkansal25", label: "GitHub" },
+    { icon: <FaTwitter />, link: "https://x.com/Vanshtwt25", label: "Twitter" },
+    { icon: <FaEnvelope />, link: "mailto:vanshkansal328@gmail.com", label: "Email" },
   ];
 
   return (
