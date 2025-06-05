@@ -1,9 +1,7 @@
 
-
-// export default HeroSection;
 import { Linkedin, Twitter, Instagram, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
-// import "../assets/style.css";
+
 
 const HeroSection = () => {
   return (
@@ -16,9 +14,7 @@ const HeroSection = () => {
         </p>
 
         {/* Title */}
-        {/* <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-[Typo-6] leading-tight text-gray-900">
-          Every pixel, a piece of my journey. <br /> Purpose rendered
-        </h1> */}
+        
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-[Typo-6] leading-tight text-gray-900">
   Design is how it feels. Development is how it works. <br /> I do both — with intention.
 </h1>

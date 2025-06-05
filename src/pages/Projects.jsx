@@ -27,7 +27,7 @@ export default function ProjectsPage() {
     <>
       <Navbar />
       <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center relative overflow-hidden px-6 py-20 glitch-overlay">
-        {/* Floating Elements */}
+        
         <motion.div
           className="absolute top-20 left-10 text-white text-xl"
           animate={{ y: [0, 10, 0] }}

@@ -76,9 +76,7 @@ const CollabPage = () => {
       <p className="mt-10 text-sm text-gray-600 text-center font-[Typo-1]">
         Have a fantastic {new Date().toLocaleDateString("en-US", { weekday: "long" })}!
       </p>
-      {/* <p className="text-base text-gray-500 mt-1 text-center font-[Typo-1]">
-        developed by <span className="font-[Typo-4] text-black italic">vansh kansal</span>. All rights reserved.
-      </p> */}
+      
       <p className="text-base text-gray-500 mt-1 text-center font-[Typo-1]">
   <span>
     developed by <span className="font-[Typo-4] text-black italic pt-0.5">vansh kansal</span>

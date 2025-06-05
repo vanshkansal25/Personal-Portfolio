@@ -16,11 +16,9 @@ export function cn(...inputs) {
 export default function StorySection() {
   return (
     <>
-      <Navbar initialTextColor = "text-black" /> {/* Keep only this Navbar here */}
+      <Navbar initialTextColor = "text-black" />
 
       <div className="relative w-full min-h-screen pt-24 px-6 md:px-16 bg-white overflow-hidden text-black">
-        {/* Remove this duplicate Navbar below */}
-        {/* <Navbar initialTextColor="text-black"/> */}
 
         <div
           className={cn(

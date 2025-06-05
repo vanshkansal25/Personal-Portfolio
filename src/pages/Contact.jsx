@@ -39,7 +39,7 @@ export default function ContactPage() {
 
         <div className="max-w-4xl mx-auto text-center mb-16 mt-5">
           <h1 className="text-4xl font-bold mb-4 text-center md:text-center">
-            {/* Responsive Heading */}
+            
             <span className="hidden md:inline">Let’s Co-Write the Next Chapter ✍️</span>
             <span className="inline md:hidden">Let’s Connect 🤝</span>
           </h1>
