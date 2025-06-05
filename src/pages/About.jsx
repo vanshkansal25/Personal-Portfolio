@@ -52,6 +52,7 @@ export default function StorySection() {
             <div className="flex-1 flex justify-center md:justify-end">
               <img
                 src={myphoto2} 
+                
                 alt="Vansh Kansal"
                 className="rounded-2xl object-cover h-full max-h-[400px] w-[470px] shadow-md"
               />
